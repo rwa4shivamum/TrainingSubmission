@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>CSS Project</title>
+
+    <!-- Internal CSS -->
+    <style>
+        h1 {
+            text-align: center;
+            color: teal;
+            letter-spacing: 2px;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            border: 2px solid teal;
+        }
+
+        /* Pseudo Classes */
+        p:first-child {
+            color: red;
+        }
+
+        p:last-child {
+            color: blue;
+        }
+
+        /* Pseudo Element */
+        h1::first-letter {
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Inline CSS -->
+<h1 style="font-family: Arial; text-transform: uppercase;">
+    CSS Mega Project
+</h1>
+
+<!-- PROFILE CARD -->
+<div class="container">
+
+    <div class="card">
+        <div class="card-inner">
+
+            <div class="card-front">
+                <img src="https://i.pravatar.cc/100" alt="user">
+                <h2>Shivam</h2>
+                <p>Web Developer</p>
+
+                <i class="fa-solid fa-heart icon"></i>
+            </div>
+
+            <div class="card-back">
+                <p>Email: demo@gmail.com</p>
+                <p>Phone: 9999999999</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- LOGIN FORM -->
+<div class="login-body">
+
+    <form class="login-form">
+        <fieldset>
+            <legend>Login</legend>
+
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+
+            <button class="btn">Login</button>
+        </fieldset>
+    </form>
+
+</div>
+
+</body>
+</html>
