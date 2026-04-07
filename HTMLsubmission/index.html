@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML All-in-One Practice Page</title>
+</head>
+<body>
+
+    <!-- Heading Tags -->
+    <h1 align="center">Welcome to HTML Practice Page</h1>
+    <h2>Introduction</h2>
+    <p>This page covers most of the HTML concepts for beginners.</p>
+    <hr/>
+
+    <!-- Text Formatting -->
+    <h2>Text Formatting</h2>
+    <p>This is <em>emphasized</em> text</p>
+    <p>This is <strong>strong</strong> text</p>
+    <p>H<sub>2</sub>O (Subscript)</p>
+    <p>10<sup>2</sup> (Superscript)</p>
+    <p><ins>Inserted Text</ins></p>
+    <p><s>Deleted Text</s></p>
+    <p><mark>Highlighted Text</mark></p>
+
+    <!-- Lists -->
+    <h2>Lists</h2>
+    <ul type="circle">
+        <li>Frontend
+            <ol type="1">
+                <li>HTML</li>
+                <li>CSS</li>
+            </ol>
+        </li>
+        <li>Backend</li>
+    </ul>
+
+    <!-- Links -->
+    <h2>Links</h2>
+    <a href="https://www.google.com" target="_blank">External Link (Google)</a><br/>
+    <a href="#bio">Internal Link (Go to Biography)</a><br/>
+
+    <!-- Image -->
+    <h2>Image</h2>
+    <img src="https://via.placeholder.com/150" alt="Sample Image" width="150" height="150" title="Demo Image"/>
+
+    <!-- Marquee -->
+    <h2>Marquee</h2>
+    <marquee direction="right" scrollamount="10">Welcome Students 🚀</marquee>
+
+    <!-- Biography Section -->
+    <h2 id="bio">Personal Biography</h2>
+    <p>My name is Student. I am learning HTML.</p>
+
+    <!-- HTML Entities -->
+    <h2>HTML Entities</h2>
+    <p>Copyright: &copy; 2026</p>
+    <p>Less than: &lt; Greater than: &gt;</p>
+
+    <!-- Form -->
+    <h2>Registration Form</h2>
+    <form>
+        Name: <input type="text" name="name" placeholder="Enter Name" required><br/><br/>
+        Email: <input type="email" name="email" required><br/><br/>
+        Password: <input type="password"><br/><br/>
+        Phone: <input type="tel" pattern="[0-9]{10}" placeholder="10 digit number"><br/><br/>
+
+        Gender:
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female<br/><br/>
+
+        Skills:
+        <input type="checkbox"> HTML
+        <input type="checkbox"> CSS<br/><br/>
+
+        Country:
+        <select>
+            <option selected>India</option>
+            <option>USA</option>
+        </select><br/><br/>
+
+        Message:<br/>
+        <textarea></textarea><br/><br/>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <!-- Table -->
+    <h2>Table Example</h2>
+    <table border="1" cellpadding="10" cellspacing="5" width="50%">
+        <caption>Student Data</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th colspan="2">Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td>80</td>
+                <td>90</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">End of Data</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- HTML5 Tags -->
+    <header>
+        <h2>Header Section</h2>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">About</a>
+    </nav>
+
+    <section>
+        <h3>Section Content</h3>
+        <p>This is a section.</p>
+    </section>
+
+    <footer>
+        <p>Footer © 2026</p>
+    </footer>
+
+    <!-- Audio -->
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="sample.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Video -->
+    <h2>Video</h2>
+    <video width="300" controls>
+        <source src="sample.mp4" type="video/mp4">
+    </video>
+
+    <!-- Iframe -->
+    <h2>Iframe</h2>
+    <iframe src="https://example.com" width="300" height="200"></iframe>
+
+</body>
+</html>
