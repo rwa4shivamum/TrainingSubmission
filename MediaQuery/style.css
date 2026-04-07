@@ -1,0 +1,142 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px 40px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 50px;
+    background: #f4f4f4;
+}
+
+/* COLUMN SECTION */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box {
+    width: 25%;
+    padding: 20px;
+    text-align: center;
+}
+
+.box i {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* ========================= */
+/* RESPONSIVE USING MIN-WIDTH */
+/* ========================= */
+
+/* XS (Mobile Portrait) */
+@media (min-width: 0px) {
+    .box {
+        width: 100%;
+    }
+}
+
+/* SM (Mobile Landscape) */
+@media (min-width: 576px) {
+    .box {
+        width: 50%;
+    }
+}
+
+/* MD (Tablet) */
+@media (min-width: 768px) {
+    .box {
+        width: 50%;
+    }
+}
+
+/* LG (Laptop) */
+@media (min-width: 992px) {
+    .box {
+        width: 33.33%;
+    }
+}
+
+/* XL (Desktop) */
+@media (min-width: 1200px) {
+    .box {
+        width: 25%;
+    }
+}
+
+/* XXL (Large Desktop) */
+@media (min-width: 1400px) {
+    .box {
+        width: 25%;
+    }
+}
+
+/* ========================= */
+/* HEADER RESPONSIVE (MIN-WIDTH) */
+/* ========================= */
+
+@media (min-width: 0px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+    }
+}
+
+/* ========================= */
+/* RESPONSIVE USING MAX-WIDTH */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .box {
+        width: 50%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .box {
+        width: 100%;
+    }
+
+    .nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
