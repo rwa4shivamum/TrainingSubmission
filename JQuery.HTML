@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>jQuery Admin Panel</title>
+
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+:root {
+--primary: #4CAF50;
+--dark: #333;
+--light: #f4f4f4;
+}
+
+body {
+margin: 0;
+font-family: Arial;
+background: var(--light);
+}
+
+/* Navbar */
+nav {
+background: var(--dark);
+color: white;
+padding: 10px;
+display: flex;
+justify-content: space-between;
+}
+
+/* Layout */
+.container {
+display: flex;
+}
+
+/* Sidebar */
+#sidebar {
+width: 200px;
+background: #222;
+color: white;
+height: 100vh;
+transition: 0.3s;
+}
+
+#sidebar.collapsed {
+width: 60px;
+}
+
+#sidebar ul {
+list-style: none;
+padding: 0;
+}
+
+#sidebar li {
+padding: 15px;
+cursor: pointer;
+}
+
+#sidebar li:hover {
+background: var(--primary);
+}
+
+/* Content */
+.content {
+flex: 1;
+padding: 20px;
+}
+
+/* Cards */
+.cards {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 15px;
+}
+
+.card {
+background: white;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+}
+
+/* Forms */
+.form-box {
+display: none;
+background: white;
+padding: 20px;
+margin-top: 20px;
+}
+
+.active {
+display: block;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav>
+<div>MyAdmin</div>
+<div>
+<button id="toggleSidebar">☰</button>
+<button id="loginBtn">Login</button>
+<button id="registerBtn">Register</button>
+</div>
+</nav>
+
+<div class="container">
+
+<!-- Sidebar -->
+<div id="sidebar">
+<ul>
+<li>Dashboard</li>
+<li id="showChart">Charts</li>
+<li id="hideCards">Hide Cards</li>
+<li id="showCards">Show Cards</li>
+</ul>
+</div>
+
+<!-- Content -->
+<div class="content">
+
+```
+<!-- Cards -->
+<div class="cards" id="cards">
+  <div class="card">Users</div>
+  <div class="card">Revenue</div>
+  <div class="card">Orders</div>
+</div>
+
+<!-- Chart -->
+<canvas id="myChart" style="margin-top:20px;"></canvas>
+
+<!-- Login -->
+<div class="form-box" id="loginForm">
+  <h3>Login</h3>
+  <input type="text" placeholder="Email"><br><br>
+  <input type="password" placeholder="Password"><br><br>
+  <button>Submit</button>
+</div>
+
+<!-- Register -->
+<div class="form-box" id="registerForm">
+  <h3>Register</h3>
+  <input type="text" placeholder="Name"><br><br>
+  <input type="email" placeholder="Email"><br><br>
+  <input type="password" placeholder="Password"><br><br>
+  <button>Submit</button>
+</div>
+```
+
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+// Sidebar Toggle
+$("#toggleSidebar").click(function(){
+$("#sidebar").toggleClass("collapsed");
+});
+
+// Hide / Show Cards
+$("#hideCards").click(function(){
+$("#cards").fadeOut();
+});
+
+$("#showCards").click(function(){
+$("#cards").fadeIn();
+});
+
+// Slide Toggle Chart
+$("#showChart").click(function(){
+$("#myChart").slideToggle();
+});
+
+// Login/Register Toggle
+$("#loginBtn").click(function(){
+$("#loginForm").fadeToggle();
+$("#registerForm").hide();
+});
+
+$("#registerBtn").click(function(){
+$("#registerForm").fadeToggle();
+$("#loginForm").hide();
+});
+
+// Mouse Event
+$(".card").click(function(){
+$(this).css("background", "lightblue");
+});
+
+// Keyboard Event
+$("input").keypress(function(){
+console.log("Typing...");
+});
+
+// Chart
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+type: 'bar',
+data: {
+labels: ['Jan', 'Feb', 'Mar'],
+datasets: [{
+label: 'Sales',
+data: [10, 20, 30],
+borderWidth: 1
+}]
+}
+});
+
+});
+</script>
+
+</body>
+</html>
